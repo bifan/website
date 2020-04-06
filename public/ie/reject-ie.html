@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>IE 娘虽好, 但是我拒绝!</title>
+    <meta charset="UTF-8" />
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      似乎没有机会在移动端使用IE
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+      双核浏览器加载此页面后由IE 变成chrome 岂不是很尴尬, 啪
+    -->
+    <link rel="stylesheet" href="/ie/scss/reject-ie.css" />
+  </head>
+  <body>
+    <h1><a href="/">bifan.io</a> 不支持IE 浏览器</h1>
+    <div class="landscape">
+      <img src="/ie/img/aizawa-inori-landscape.jpg" alt="IE 娘" />
+    </div>
+    <div class="portrait">
+      <img src="/ie/img/aizawa-inori-portrait.png" alt="IE 娘" />
+    </div>
+    <div class="ies-wrap">
+      <div class="ie ie-7-8">
+        <img src="/ie/img/ies/ie-7-8-logo.png" alt="IE 7 8 logo" />
+        <div class="say-no">
+          <img src="/ie/img/ies/x-66.png" />
+        </div>
+      </div>
+      <div class="ie ie-9">
+        <img src="/ie/img/ies/ie-9-logo.png" alt="IE 9 logo" />
+        <div class="say-no">
+          <img src="/ie/img/ies/x-66.png" />
+        </div>
+      </div>
+      <div class="ie ie-10-11">
+        <img src="/ie/img/ies/ie-10-11-logo.svg" alt="IE 10 11 logo" />
+        <div class="say-no">
+          <img src="/ie/img/ies/x-66.png" />
+        </div>
+      </div>
+      <div class="ie ie-12-edge">
+        <img src="/ie/img/ies/ie-12-edge-logo.svg" alt="IE 12 edge logo" />
+        <div class="say-no">
+          <img src="/ie/img/ies/x-66.png" />
+        </div>
+      </div>
+    </div>
+    <div style="clear: both;"></div>
+    <hr />
+    <h2>为什么不应该使用IE</h2>
+    <ul>
+      <li>
+        微软官方 →
+        <a
+          href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-perils-of-using-internet-explorer-as-your-default-browser/ba-p/331732"
+          title="The perils of using Internet Explorer as your default browser"
+          target="_blank"
+          >只应在不得已时才使用IE</a
+        >
+      </li>
+      <li>
+        微软官方 →
+        <a
+          href="https://support.microsoft.com/zh-cn/help/17454/lifecycle-faq-internet-explorer-and-edge"
+          title="Internet Explorer 和 Edge 的生命周期常见问题解答"
+          target="_blank"
+          >IE 不再有功能性更新, 甚至没有安全性更新</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.ezcomputersolutions.com/blog/stop-using-internet-explorer/"
+          target="_blank"
+          >WHY YOU NEED TO STOP USING INTERNET EXPLORER</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.vieodesign.com/blog/why-we-abandoned-ie11"
+          target="_blank"
+          >WHY WE ABANDONED IE11 (AND WHY YOU SHOULD TOO)</a
+        >
+      </li>
+    </ul>
+    <h2>现代浏览器列举</h2>
+    <div class="modern">
+      <div class="chrome">
+        <a
+          href="https://www.google.com/chrome/"
+          target="_blank"
+          title="基于chromium 的谷歌浏览器"
+          ><img src="/ie/img/modern/chrome.svg"
+        /></a>
+      </div>
+      <div class="microsoft-edge-chromium">
+        <a
+          href="https://www.microsoft.com/edge"
+          target="_blank"
+          title="基于chromium 的微软最新浏览器, Microsoft Edge"
+          ><img src="/ie/img/modern/microsoft-edge-chromium.svg"
+        /></a>
+      </div>
+      <div class="brave">
+        <a
+          href="https://brave.com/"
+          target="_blank"
+          title="基于chromium 的Brave 浏览器, 主打隐私保护"
+          ><img src="/ie/img/modern/brave.svg"
+        /></a>
+      </div>
+      <div class="firefox">
+        <a
+          href="https://www.mozilla.org/firefox/new/"
+          target="_blank"
+          title="火狐浏览器, Firefox"
+          ><img src="/ie/img/modern/firefox.svg"
+        /></a>
+      </div>
+      <div class="opera">
+        <a href="https://www.opera.com/" target="_blank" title="Opera 浏览器"
+          ><img src="/ie/img/modern/opera.svg"
+        /></a>
+      </div>
+    </div>
+    <p>
+      <span class="made-in-china"
+        >国产? → 主打骚扰和隐私泄露以及卡死 (主观偏见)</span
+      >
+    </p>
+  </body>
+</html>
+<!-- 
+  使用IE 的设备分析
+    它是PC
+    它分辨率不会非常高
+  
+  结论, 只用@media 支持两种分辨率, 且高清屏幕图片模糊的问题只用一个大图解决
+
+  贴心的使用float 而不是flex 😭
+ -->
