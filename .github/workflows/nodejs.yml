@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: "dist/"
-          target: "REMOTE_TARGET"
+          target: ${{ secrets.TARGET }}
         #uses: easingthemes/ssh-deploy@v2.0.9
         #env:
          # SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
