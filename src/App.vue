@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="min-width: 300px">
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-list dense>
         <v-list-item link to="/">
