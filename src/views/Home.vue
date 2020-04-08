@@ -51,12 +51,18 @@
               </v-card-text>
             </div>
           </div>
-          <div>
-            <v-btn href="https://github.com/bifan" icon target="_blank">
+          <div class="ml-2">
+            <v-btn
+              class="mr-1 mb-1"
+              href="https://github.com/bifan"
+              icon
+              target="_blank"
+            >
               <v-icon>mdi-github</v-icon>
             </v-btn>
 
             <v-btn
+              class="mr-1 mb-1"
               href="https://codepen.io/bifan/pens/public"
               icon
               target="_blank"
@@ -64,11 +70,17 @@
               <v-icon>mdi-codepen</v-icon>
             </v-btn>
 
-            <v-btn href="mailto:mail@bifan.io" icon target="_blank">
+            <v-btn
+              class="mr-1 mb-1"
+              href="mailto:mail@bifan.io"
+              icon
+              target="_blank"
+            >
               <v-icon>mdi-email</v-icon>
             </v-btn>
 
             <v-btn
+              class="mr-1 mb-1"
               href="https://space.bilibili.com/32810223"
               icon
               target="_blank"
@@ -76,6 +88,7 @@
               <v-icon>mdi-alpha-b-circle</v-icon>
             </v-btn>
             <v-btn
+              class="mr-1 mb-1"
               href="http://steamcommunity.com/profiles/76561198127174440/"
               icon
               target="_blank"
