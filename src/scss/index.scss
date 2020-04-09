@@ -31,3 +31,11 @@ s {
   text-decoration-style: wavy; // double
   text-decoration-color: #ed553b;
 }
+
+.cards {
+  margin: 0;
+  padding: 5;
+  > div {
+    margin: 5px;
+  }
+}
