@@ -6,9 +6,18 @@
           <v-img
             src="@/assets/img/coding-at-home.jpg"
             class="white--text align-end"
+            min-height="200px"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             alt="Coding at home"
           >
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
             <v-card-title class="🌈-underline"
               ><span>Coding at home</span></v-card-title
             >
