@@ -107,5 +107,27 @@
         >
       </v-card-actions>
     </v-card>
+    <v-card width="350">
+      <v-img
+        height="200px"
+        src="https://bifan.io/ie/img/aizawa-inori-landscape.jpg"
+        alt="bifan.io 不支持IE 浏览器"
+      >
+      </v-img>
+      <v-card-title>拒绝IE</v-card-title>
+
+      <v-card-text class="pb-0"
+        >本站对IE 浏览器的所有请求只会返回同一内容.
+        在服务端判断并重写内容</v-card-text
+      >
+      <v-card-actions>
+        <v-btn
+          color="#ED553B"
+          href="https://bifan.io/ie/reject-ie.html"
+          target="_blank"
+          >查看此内容</v-btn
+        >
+      </v-card-actions>
+    </v-card>
   </v-container>
 </template>
