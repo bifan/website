@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex flex-wrap cards justify-center">
+  <v-container class="cards">
     <v-card width="350">
       <v-img
         height="200px"
@@ -10,7 +10,7 @@
       <v-card-title>撸的越多码越多</v-card-title>
 
       <v-card-subtitle class="pb-0">好像没什么不对</v-card-subtitle>
-      <v-card-actions>
+      <v-card-actions class="cart-btns">
         <v-btn
           color="#ED553B"
           href="https://www.notion.so/Coding-4101a58df0244f2aace8c87527cb9dc0"
@@ -62,11 +62,16 @@
     </v-card>
 
     <v-card width="350">
-      <v-img height="200px" src="" alt=""> </v-img>
+      <v-img
+        height="200px"
+        src="@/assets/img/entrance-curricula.jpg"
+        alt="学程 Curricula 项目"
+      >
+      </v-img>
       <v-card-title>学程 Curricula</v-card-title>
 
       <v-card-subtitle class="pb-0">Vue.js 系技术栈项目</v-card-subtitle>
-      <v-card-actions>
+      <v-card-actions class="cart-btns">
         <v-btn
           color="#ED553B"
           href="https://bifan.io/curricula/"
@@ -88,11 +93,19 @@
       </v-card-actions>
     </v-card>
     <v-card width="350">
-      <v-img height="200px" src="" alt=""> </v-img>
+      <v-img
+        height="200px"
+        src="@/assets/img/entrance-website-v1.jpg"
+        alt="个人网站"
+      >
+      </v-img>
       <v-card-title>个人网站</v-card-title>
 
       <v-card-subtitle class="pb-0">就是当前看到的网站啦</v-card-subtitle>
-      <v-card-actions>
+      <v-card-text class="pb-0"
+        >个人网站的搭建可以对Web 安全, 自动部署什么的有所实践</v-card-text
+      >
+      <v-card-actions class="cart-btns">
         <v-btn
           color="#ED553B"
           href="https://www.notion.so/2ec2e7c2ba084ae6bec767b07aed9b7e"
@@ -120,7 +133,7 @@
         >本站对IE 浏览器的所有请求只会返回同一内容.
         在服务端判断并重写内容</v-card-text
       >
-      <v-card-actions>
+      <v-card-actions class="cart-btns">
         <v-btn
           color="#ED553B"
           href="https://bifan.io/ie/reject-ie.html"
@@ -131,3 +144,16 @@
     </v-card>
   </v-container>
 </template>
+
+<script>
+import Masonry from "masonry-layout";
+
+export default {
+  mounted() {
+    new Masonry(".cards", {
+      itemSelector: ".cards>div",
+      gutter: 10
+    });
+  }
+};
+</script>

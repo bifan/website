@@ -41,12 +41,12 @@
         />
       </div>
     </v-app-bar>
-    <v-content
-      ><transition>
+    <v-content>
+      <router-view></router-view>
+      <!-- <transition>
         <keep-alive>
-          <router-view></router-view>
         </keep-alive>
-      </transition>
+      </transition> -->
     </v-content>
     <v-footer
       ><v-spacer></v-spacer>

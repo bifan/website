@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex flex-wrap cards justify-center">
+  <v-container class="cards">
     <v-card width="350">
       <v-img
         height="200px"
@@ -83,3 +83,16 @@
     </v-card>
   </v-container>
 </template>
+
+<script>
+import Masonry from "masonry-layout";
+
+export default {
+  mounted() {
+    new Masonry(".cards", {
+      itemSelector: ".cards>div",
+      gutter: 10
+    });
+  }
+};
+</script>
