@@ -39,3 +39,8 @@ s {
     margin-bottom: 10px;
   }
 }
+
+body {
+  // Vuetify dark theme 在移动端上下滑动触底时会有白边, body 背景色竟然没设置, 可怕
+  background-color: #121212;
+}
