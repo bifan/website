@@ -29,10 +29,15 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app dense clipped-left>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" /><v-spacer></v-spacer>
+      <!-- v-app-bar-nav-icon 会编译出未设置可访问性的按钮  -->
+      <v-app-bar-nav-icon
+        @click.stop="drawer = !drawer"
+        aria-label="menu button"
+      />
+      <v-spacer></v-spacer>
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="Logo"
           class="shrink"
           contain
           src="./assets/logo.png"

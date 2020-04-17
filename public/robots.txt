@@ -1,1 +1,7 @@
-( •̀ ω •́ )y
+#( •̀ ω •́ )y
+User-agent: *
+Disallow: /favicons/
+Disallow: /img/
+Disallow: /js/
+Disallow: /css/
+Disallow: /ie/
