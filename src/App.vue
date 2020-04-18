@@ -56,9 +56,10 @@
     <v-footer
       ><v-spacer></v-spacer>
       <a
-        class="subtitle-2"
-        style="text-decoration: none;"
+        rel="nofollow license noopener noreferrer"
+        class="subtitle-2 license"
         href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh"
+        target="_blank"
         >CC BY-SA 4.0</a
       >
       <span class="ml-2 subtitle-2">探索人生, 留下经历</span>
