@@ -1,6 +1,6 @@
 <template>
   <v-container class="cards">
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-img
         height="200px"
         src="@/assets/img/coding-delicious.jpg"
@@ -49,10 +49,10 @@
       >
     </v-card>
 
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-card-text>📢 Notion 笔记可能需要科学上网姿势哦</v-card-text>
     </v-card>
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-img
         height="200px"
         src="@/assets/img/entrance-curricula.jpg"
@@ -96,7 +96,7 @@
         >
       </v-card-actions>
     </v-card>
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-img
         height="200px"
         src="@/assets/img/entrance-website-v1.jpg"
@@ -135,7 +135,7 @@
         >
       </v-card-actions>
     </v-card>
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-img
         height="200px"
         src="https://bifan.io/ie/img/aizawa-inori-landscape.jpg"
@@ -162,6 +162,150 @@
           href="https://bifan.io/ie/reject-ie.html"
           target="_blank"
           >查看此内容</v-btn
+        >
+      </v-card-actions>
+    </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        src="@/assets/img/coding-order-movies.jpg"
+        alt="吉卜力工作室动画列表排序"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>吉卜力工作室动画列表排序</v-card-title>
+
+      <v-card-text>数据源: https://jikan.moe/</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/综合应用/页面内容排序/"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://github.com/bifan/front-end-point/tree/master/综合应用/页面内容排序/"
+          target="_blank"
+          >GitHub 地址</v-btn
+        >
+      </v-card-actions>
+    </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        src="@/assets/img/coding-event-bubble.jpg"
+        alt="事件冒泡机制"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>事件冒泡机制和节流</v-card-title>
+
+      <v-card-text>冒泡过程中鼠标会变为繁忙状态</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/综合应用/事件/event.html"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://github.com/bifan/front-end-point/tree/master/综合应用/事件/"
+          target="_blank"
+          >GitHub 地址</v-btn
+        >
+      </v-card-actions>
+    </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        src="@/assets/img/coding-flex-demo.jpg"
+        alt="CSS flex"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>Flex 示例</v-card-title>
+
+      <v-card-text>鼠标滑过时显示代码</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/综合应用/css-flex/flex.html"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://github.com/bifan/front-end-point/tree/master/综合应用/css-flex/"
+          target="_blank"
+          >GitHub 地址</v-btn
+        >
+      </v-card-actions>
+    </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        src="@/assets/img/coding-grid-responsive.jpg"
+        alt="CSS flex"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>Grid 响应式布局</v-card-title>
+
+      <v-card-text>需要手动调整视口大小来测试</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/综合应用/响应式布局/响应式布局.html"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://github.com/bifan/front-end-point/tree/master/综合应用/响应式布局/"
+          target="_blank"
+          >GitHub 地址</v-btn
         >
       </v-card-actions>
     </v-card>

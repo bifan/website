@@ -2,7 +2,7 @@
   <v-container>
     <v-row dense>
       <v-col cols="12">
-        <v-card>
+        <v-card outlined>
           <v-img
             src="@/assets/img/coding-at-home.jpg"
             class="white--text align-end"
@@ -38,7 +38,7 @@
       </v-col>
 
       <v-col cols="12">
-        <v-card color="#1f7087">
+        <v-card color="#1f7087" outlined>
           <div class="d-flex flex-wrap">
             <v-avatar class="ma-3" size="125">
               <v-img src="@/assets/img/me.jpg"></v-img>

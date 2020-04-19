@@ -1,6 +1,30 @@
 <template>
   <v-container class="cards">
-    <v-card width="350">
+    <v-card width="350" outlined>
+      <v-img height="200px" src="@/assets/img/front-end-find-way.jpg" alt="">
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>如何构建体系化的知识</v-card-title>
+
+      <v-card-actions>
+        <v-btn
+          text
+          rel="noreferrer external noopener"
+          class="text-capitalize"
+          href="https://www.notion.so/a182119c79e248ccb38fa42b7c9b0db1"
+          target="_blank"
+        >
+          Notion 笔记
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card width="350" outlined>
       <v-img
         height="200px"
         src="@/assets/img/front-end-road-part.jpg"
@@ -47,10 +71,10 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-card-text>📢 Notion 笔记可能需要科学上网姿势哦</v-card-text>
     </v-card>
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-img height="200px" src="@/assets/img/front-end-souce-code.jpg" alt="">
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -74,31 +98,7 @@
         </v-btn>
       </v-card-actions>
     </v-card>
-    <v-card width="350">
-      <v-img height="200px" src="@/assets/img/front-end-find-way.jpg" alt="">
-        <template v-slot:placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row> </template
-      ></v-img>
-      <v-card-title>如何构建体系化的知识</v-card-title>
-
-      <v-card-actions>
-        <v-btn
-          text
-          rel="noreferrer external noopener"
-          class="text-capitalize"
-          href="https://www.notion.so/a182119c79e248ccb38fa42b7c9b0db1"
-          target="_blank"
-        >
-          Notion 笔记
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-    <v-card width="350">
+    <v-card width="350" outlined>
       <v-img height="150px" src="@/assets/img/front-end-interview.jpg" alt="">
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
