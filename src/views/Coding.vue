@@ -309,6 +309,42 @@
         >
       </v-card-actions>
     </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        src="@/assets/img/coding-nth-by-js.jpg"
+        alt="CSS flex"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>JS 模拟CSS nth-child() 选择器</v-card-title>
+
+      <v-card-text>为了深刻了解2n+1 是什么意思 (●'◡'●)</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/综合应用/模拟CSS-nth-child-选择器/"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://github.com/bifan/front-end-point/tree/master/综合应用/模拟CSS-nth-child-选择器/"
+          target="_blank"
+          >GitHub 地址</v-btn
+        >
+      </v-card-actions>
+    </v-card>
   </v-container>
 </template>
 
