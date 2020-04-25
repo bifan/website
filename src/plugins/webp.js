@@ -23,6 +23,8 @@ class WebP {
 
   install(Vue) {
     Vue.prototype.isSupportWebp = this.isSupportWebp;
+    // 在PC 上测试jpg/png, 假装不支持webp
+    // Vue.prototype.isSupportWebp = false;
     Vue.prototype.useWebP = function(url) {
       if (this.isSupportWebp) {
         url = url.replace(/\.\w{1,5}$/, ".webp");
