@@ -36,14 +36,79 @@
       />
       <v-spacer></v-spacer>
       <div class="d-flex align-center">
+        <!-- :src="require(webpFirst('@/assets/img/logo.png'))" -->
+        <!-- <template v-if="this.isSupportWebp">
+          <v-img
+            alt="Logo"
+            class="shrink"
+            contain
+            :src="require('./assets/img/logo.webp')"
+            transition="scale-transition"
+            width="25"
+          />
+        </template>
+        <template v-else>
+          <v-img
+            alt="Logo"
+            class="shrink"
+            contain
+            :src="require('./assets/img/logo.png')"
+            transition="scale-transition"
+            width="25"
+          />
+        </template> 
+        
+        :src="require('@/assets/img/logo.webp')" ✔
+        :src="require('./assets/img/logo.webp')" ✔
+
+        require('@/assets/img/logo.webp') → img/logo.196f9e10.webp
+
+          :src="useWebP(require('@/assets/img/logo.png'))"
+        -->
         <v-img
           alt="Logo"
           class="shrink"
           contain
-          src="./assets/logo.png"
+          src="@/assets/img/logo.png"
           transition="scale-transition"
           width="25"
         />
+        <v-img
+          alt="Logo"
+          class="shrink"
+          contain
+          :src="require('@/assets/img/logo.webp')"
+          transition="scale-transition"
+          width="25"
+        />
+        <v-img
+          alt="Logo"
+          class="shrink"
+          contain
+          :src="
+            require(isSupportWebp
+              ? '@/assets/img/logo.webp'
+              : '@/assets/img/logo.png')
+          "
+          transition="scale-transition"
+          width="25"
+        />
+        <!-- <v-img
+          alt="Logo"
+          class="shrink"
+          contain
+          :src="useWebP(require('@/assets/img/logo.png'))"
+          transition="scale-transition"
+          width="25"
+        /> -->
+        <!-- <v-img
+          alt="Logo"
+          class="shrink"
+          contain
+          :src="require(useWebP('@/assets/img/logo.png'))"
+          transition="scale-transition"
+          width="25"
+        /> -->
       </div>
     </v-app-bar>
     <v-content>
@@ -72,7 +137,51 @@ export default {
   name: "App",
 
   data: () => ({
-    drawer: null
-  })
+    drawer: null,
+    // 尝试在cerated 时修改后缀名变量然后拼接
+    logoUrl0: "@/assets/img/",
+    logoUrl1: "@/assets/img/logo.webp",
+    logoUrl2: "./assets/img/logo.webp",
+    // logoUrl2222: require("./assets/img/logo.webp"),
+    logoUrl22: "logo.webp",
+    logoUrl222: "logo.png",
+    logoUrl3: "~/assets/img/logo.webp",
+    l1: require("@/assets/img/logo.webp"),
+    l2: ""
+  }),
+  created() {
+    // var url = '/assets/img/logo.webp';
+    // console.log("created-require('')", require("assets/img/logo.webp"));
+    // let url = this.useWebP("@/assets/img/logo.webp");
+    // var url = 'assets/img/logo.webp';
+    // url = '../assets/img/logo.webp';
+    // console.log("created-url:", url);
+    // console.log("created-require('')", require("@/assets/img/logo.webp"));
+    // console.log("created-require(url):", require(url));
+    // console.log("created", require(url)); //✔
+    // console.log("l1", this.l1);
+  },
+  mounted() {
+    // let url = this.useWebP("@/assets/img/logo.webp");
+    // url = "@/assets/img/logo.webp";
+    // console.log("mounted", url); //✔
+    // console.log("mounted", require(url)); //✔
+    // this.l2 = this.useWebP(require("@/assets/img/logo.png"));
+  },
+  // render() {
+  //   console.log("render", require("@/assets/img/logo.webp")); ❌, 在此生命周期不能使用require
+  // },
+  methods: {
+    webpFirst(url) {
+      url = this.useWebP(url);
+      // this.webpSupported
+      console.log("require(url):", require(url));
+      url = require(url);
+      console.log("this.isSupportWebp:", this.isSupportWebp);
+      console.log("useWebP:", this.useWebP);
+      console.log("url:", url);
+      return url;
+    }
+  }
 };
 </script>
