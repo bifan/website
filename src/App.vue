@@ -4,7 +4,7 @@
       <v-list dense>
         <v-list-item link to="/">
           <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>{{ icons.mdiHome }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Home</v-list-item-title>
@@ -12,7 +12,7 @@
         </v-list-item>
         <v-list-item link to="/front-end">
           <v-list-item-action>
-            <v-icon>mdi-file-tree</v-icon>
+            <v-icon>{{ icons.mdiFileTree }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>前端知识体系</v-list-item-title>
@@ -20,7 +20,7 @@
         </v-list-item>
         <v-list-item link to="/coding">
           <v-list-item-action>
-            <v-icon>mdi-keyboard-settings-outline</v-icon>
+            <v-icon>{{ icons.mdiKeyboardSettingsOutline }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Coding</v-list-item-title>
@@ -72,11 +72,17 @@
 </template>
 
 <script>
+import { mdiHome, mdiFileTree, mdiKeyboardSettingsOutline } from "@mdi/js";
 export default {
   name: "App",
 
   data: () => ({
-    drawer: null
+    drawer: null,
+    icons: {
+      mdiHome,
+      mdiFileTree,
+      mdiKeyboardSettingsOutline
+    }
   })
 };
 </script>

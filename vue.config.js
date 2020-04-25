@@ -6,7 +6,7 @@ module.exports = {
     config.module
       .rule("images")
       // .test(/\.(png|jpg|jpeg|gif|svg)$/i)
-      .test(/\.(gif|png|jpe?g|svg|webp)$/i)
+      .test(/\.(gif|png|jpe?g|webp)$/i)
       .use("image-webpack-loader")
       .loader("image-webpack-loader")
       .options({

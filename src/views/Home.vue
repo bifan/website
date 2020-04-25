@@ -27,15 +27,15 @@
             >
           </v-img>
           <v-chip class="ma-2" color="rgba(0,0,0,0)" label>
-            <v-icon left>mdi-label</v-icon>
+            <v-icon left>{{ icons.mdiLabel }}</v-icon>
             升降桌
           </v-chip>
           <v-chip class="ma-2" color="rgba(0,0,0,0)" label>
-            <v-icon left>mdi-label</v-icon>
+            <v-icon left>{{ icons.mdiLabel }}</v-icon>
             不够用的屏幕
           </v-chip>
           <v-chip class="ma-2" color="rgba(0,0,0,0)" label>
-            <v-icon left>mdi-label</v-icon>
+            <v-icon left>{{ icons.mdiLabel }}</v-icon>
             很凶的熊
           </v-chip>
         </v-card>
@@ -80,7 +80,7 @@
               target="_blank"
               aria-label="外链到GitHub"
             >
-              <v-icon>mdi-github</v-icon>
+              <v-icon>{{ icons.mdiGithub }}</v-icon>
             </v-btn>
 
             <v-btn
@@ -91,7 +91,7 @@
               target="_blank"
               aria-label="外链到Codepen"
             >
-              <v-icon>mdi-codepen</v-icon>
+              <v-icon>{{ icons.mdiCodepen }}</v-icon>
             </v-btn>
 
             <v-btn
@@ -102,7 +102,7 @@
               target="_blank"
               aria-label="邮箱地址"
             >
-              <v-icon>mdi-email</v-icon>
+              <v-icon>{{ icons.mdiEmail }}</v-icon>
             </v-btn>
 
             <v-btn
@@ -113,7 +113,7 @@
               target="_blank"
               aria-label="外链到B站"
             >
-              <v-icon>mdi-alpha-b-circle</v-icon>
+              <v-icon>{{ icons.mdiAlphaBCircle }}</v-icon>
             </v-btn>
             <v-btn
               rel="noreferrer external noopener"
@@ -123,7 +123,7 @@
               target="_blank"
               aria-label="外链到Steam"
             >
-              <v-icon>mdi-steam</v-icon>
+              <v-icon>{{ icons.mdiSteam }}</v-icon>
             </v-btn>
           </div>
         </v-card>
@@ -134,9 +134,26 @@
 
 <script>
 // @ is an alias to /src
-
+import {
+  mdiLabel,
+  mdiGithub,
+  mdiCodepen,
+  mdiEmail,
+  mdiAlphaBCircle,
+  mdiSteam
+} from "@mdi/js";
 export default {
   name: "Home",
-  mounted() {}
+  data: () => ({
+    drawer: null,
+    icons: {
+      mdiLabel,
+      mdiGithub,
+      mdiCodepen,
+      mdiEmail,
+      mdiAlphaBCircle,
+      mdiSteam
+    }
+  })
 };
 </script>
