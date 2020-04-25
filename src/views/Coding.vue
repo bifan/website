@@ -265,7 +265,7 @@
             ? '@/assets/img/coding-flex-demo.webp'
             : '@/assets/img/coding-flex-demo.jpg')
         "
-        alt="CSS flex"
+        alt="CSS flex 示例"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -305,7 +305,7 @@
             ? '@/assets/img/coding-grid-responsive.webp'
             : '@/assets/img/coding-grid-responsive.jpg')
         "
-        alt="CSS flex"
+        alt="Grid 响应式布局"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -345,7 +345,7 @@
             ? '@/assets/img/coding-nth-by-js.webp'
             : '@/assets/img/coding-nth-by-js.jpg')
         "
-        alt="CSS flex"
+        alt="模拟CSS nth-child"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -374,6 +374,41 @@
           href="https://github.com/bifan/front-end-point/tree/master/综合应用/模拟CSS-nth-child-选择器/"
           target="_blank"
           >GitHub 地址</v-btn
+        >
+      </v-card-actions>
+    </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-lighthouse-test.webp'
+            : '@/assets/img/coding-lighthouse-test.jpg')
+        "
+        alt="lighthouse 跑分测试"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>bifan.io → lighthouse 跑分测试</v-card-title>
+
+      <v-card-text
+        >实践的过程中可以对知识点有个主次的梳理. 再进一步的提升就要依赖SSR 和CDN
+        了😄</v-card-text
+      >
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://www.notion.so/lighthouse-516237715e4f42b581b2c4a509e86cee"
+          target="_blank"
+          >Notion 笔记</v-btn
         >
       </v-card-actions>
     </v-card>
