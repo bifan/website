@@ -3,7 +3,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/coding-delicious.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-delicious.webp'
+            : '@/assets/img/coding-delicious.jpg')
+        "
         alt="朝气蓬勃"
       >
         <v-card-title>敲代码咯</v-card-title>
@@ -55,7 +59,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/entrance-curricula.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/entrance-curricula.webp'
+            : '@/assets/img/entrance-curricula.jpg')
+        "
         alt="学程 Curricula 项目"
       >
         <template v-slot:placeholder>
@@ -99,7 +107,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/entrance-website-v1.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/entrance-website-v1.webp'
+            : '@/assets/img/entrance-website-v1.jpg')
+        "
         alt="个人网站"
       >
         <template v-slot:placeholder>
@@ -168,7 +180,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/coding-order-movies.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-order-movies.webp'
+            : '@/assets/img/coding-order-movies.jpg')
+        "
         alt="吉卜力工作室动画列表排序"
       >
         <template v-slot:placeholder>
@@ -204,7 +220,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/coding-event-bubble.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-event-bubble.webp'
+            : '@/assets/img/coding-event-bubble.jpg')
+        "
         alt="事件冒泡机制"
       >
         <template v-slot:placeholder>
@@ -240,7 +260,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/coding-flex-demo.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-flex-demo.webp'
+            : '@/assets/img/coding-flex-demo.jpg')
+        "
         alt="CSS flex"
       >
         <template v-slot:placeholder>
@@ -276,7 +300,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/coding-grid-responsive.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-grid-responsive.webp'
+            : '@/assets/img/coding-grid-responsive.jpg')
+        "
         alt="CSS flex"
       >
         <template v-slot:placeholder>
@@ -312,7 +340,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/coding-nth-by-js.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-nth-by-js.webp'
+            : '@/assets/img/coding-nth-by-js.jpg')
+        "
         alt="CSS flex"
       >
         <template v-slot:placeholder>

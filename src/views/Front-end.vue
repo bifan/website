@@ -1,7 +1,15 @@
 <template>
   <v-container class="cards">
     <v-card width="350" outlined>
-      <v-img height="200px" src="@/assets/img/front-end-find-way.jpg" alt="">
+      <v-img
+        height="200px"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/front-end-find-way.webp'
+            : '@/assets/img/front-end-find-way.jpg')
+        "
+        alt=""
+      >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular
@@ -27,7 +35,11 @@
     <v-card width="350" outlined>
       <v-img
         height="200px"
-        src="@/assets/img/front-end-road-part.jpg"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/front-end-road-part.webp'
+            : '@/assets/img/front-end-road-part.jpg')
+        "
         alt="前端知识体系路线图"
       >
         <template v-slot:placeholder>
@@ -75,7 +87,15 @@
       <v-card-text>📢 Notion 笔记可能需要科学上网姿势哦</v-card-text>
     </v-card>
     <v-card width="350" outlined>
-      <v-img height="200px" src="@/assets/img/front-end-souce-code.jpg" alt="">
+      <v-img
+        height="200px"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/front-end-souce-code.webp'
+            : '@/assets/img/front-end-souce-code.jpg')
+        "
+        alt=""
+      >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular
@@ -99,7 +119,15 @@
       </v-card-actions>
     </v-card>
     <v-card width="350" outlined>
-      <v-img height="150px" src="@/assets/img/front-end-interview.jpg" alt="">
+      <v-img
+        height="150px"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/front-end-interview.webp'
+            : '@/assets/img/front-end-interview.jpg')
+        "
+        alt=""
+      >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular

@@ -4,7 +4,11 @@
       <v-col cols="12">
         <v-card outlined>
           <v-img
-            src="@/assets/img/coding-at-home.jpg"
+            :src="
+              require(isSupportWebp
+                ? '@/assets/img/coding-at-home.webp'
+                : '@/assets/img/coding-at-home.jpg')
+            "
             class="white--text align-end"
             min-height="200px"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
@@ -41,7 +45,14 @@
         <v-card color="#1f7087" outlined>
           <div class="d-flex flex-wrap">
             <v-avatar class="ma-3" size="125">
-              <v-img src="@/assets/img/me.jpg"></v-img>
+              <v-img
+                :src="
+                  require(isSupportWebp
+                    ? '@/assets/img/me.webp'
+                    : '@/assets/img/me.jpg')
+                "
+                alt="头像"
+              ></v-img>
             </v-avatar>
             <div>
               <v-card-title>Hello, 我是毕凡</v-card-title>
