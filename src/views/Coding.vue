@@ -28,7 +28,7 @@
           href="https://github.com/bifan"
           target="_blank"
         >
-          GitHub 管理代码
+          GitHub
         </v-btn>
         <v-btn
           rel="noreferrer external noopener"
@@ -37,7 +37,7 @@
           href="https://codepen.io/bifan/pens/public"
           target="_blank"
         >
-          CodePen 在线写代码
+          CodePen
         </v-btn></v-card-actions
       >
       <v-card-actions class="pt-0">
@@ -48,7 +48,7 @@
           href="https://www.notion.so/6803fe8e6a2e445bb3d6f05b2fb1592b"
           target="_blank"
         >
-          我发现的其它在线写代码的好地方
+          在线写代码的好地方
         </v-btn></v-card-actions
       >
     </v-card>
