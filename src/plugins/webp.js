@@ -8,9 +8,8 @@
 */
 class WebP {
   constructor() {
-    this.isSupportWebp = false;
-
-    /*
+    this.isSupportWebp = //false;
+      /*
     Firefox 返回png, 这种方式只适用于chrome, 弃用
     try {
       this.isSupportWebp =
@@ -23,7 +22,7 @@ class WebP {
     }
     */
 
-    /*
+      /*
       globalThis, 全局执行栈中的this 属性
         Worker
           self
@@ -35,23 +34,23 @@ class WebP {
       self 支持的面最大
     */
 
-    (async () => {
-      // If browser doesn't have createImageBitmap, we can't use webp.
-      if (!self.createImageBitmap) {
-        this.isSupportWebp = false;
-        return;
-      }
-      // Base64 representation of a white point image
-      const webpData =
-        "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=";
-      // Retrieve the Image in Blob Format
-      const blob = await fetch(webpData).then(r => r.blob());
-      // If the createImageBitmap method succeeds, return true, otherwise false
-      this.isSupportWebp = await createImageBitmap(blob).then(
-        () => true,
-        () => false
-      );
-    })();
+      (async () => {
+        // If browser doesn't have createImageBitmap, we can't use webp.
+        if (!self.createImageBitmap) {
+          this.isSupportWebp = false;
+          return;
+        }
+        // Base64 representation of a white point image
+        const webpData =
+          "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=";
+        // Retrieve the Image in Blob Format
+        const blob = await fetch(webpData).then(r => r.blob());
+        // If the createImageBitmap method succeeds, return true, otherwise false
+        return await createImageBitmap(blob).then(
+          () => true,
+          () => false
+        );
+      })();
   }
 
   install(Vue) {
