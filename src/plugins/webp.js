@@ -5,11 +5,15 @@
 
   https://github.com/slexx1234/v-webp/blob/master/index.js
   https://dev.to/gksander/webp-ing-your-site-reduce-image-file-size-increase-site-performance-4ho8
+  https://developers.google.com/speed/webp/faq
+    最终还是要靠webp 之父, Google
 */
 class WebP {
-  constructor() {
-    this.isSupportWebp = //false;
-      /*
+  // constructor() {
+  //   this.isSupportWebp =
+  //false;
+
+  /*
     Firefox 返回png, 这种方式只适用于chrome, 弃用
     try {
       this.isSupportWebp =
@@ -22,7 +26,7 @@ class WebP {
     }
     */
 
-      /*
+  /*
       globalThis, 全局执行栈中的this 属性
         Worker
           self
@@ -34,27 +38,74 @@ class WebP {
       self 支持的面最大
     */
 
-      (async () => {
-        // If browser doesn't have createImageBitmap, we can't use webp.
-        if (!self.createImageBitmap) {
-          this.isSupportWebp = false;
-          return;
-        }
-        // Base64 representation of a white point image
-        const webpData =
-          "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=";
-        // Retrieve the Image in Blob Format
-        const blob = await fetch(webpData).then(r => r.blob());
-        // If the createImageBitmap method succeeds, return true, otherwise false
-        return await createImageBitmap(blob).then(
-          () => true,
-          () => false
-        );
-      })();
-  }
+  //  这个支持firefox, 但是在IOS 端也会返回true, 导致IOS 加载webp 无法显示
 
-  install(Vue) {
+  // (async () => {
+  //   // If browser doesn't have createImageBitmap, we can't use webp.
+  //   if (!self.createImageBitmap) {
+  //     // this.isSupportWebp = false;
+  //     return false;
+  //   }
+  //   // Base64 representation of a white point image
+  //   const webpData =
+  //     "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=";
+  //   // Retrieve the Image in Blob Format
+  //   const blob = await fetch(webpData).then(r => r.blob());
+  //   // If the createImageBitmap method succeeds, return true, otherwise false
+  //   return await createImageBitmap(blob).then(
+  //     () => true,
+  //     () => false
+  //   );
+  // })();
+  // }
+
+  constructor() {
+    this.isSupportWebp = false;
+    // this.temp =
+  }
+  async install(Vue) {
+    await (async () => {
+      // If browser doesn't have createImageBitmap, we can't use webp.
+      if (!self.createImageBitmap) {
+        // this.isSupportWebp = false;
+        return false;
+      }
+      // Base64 representation of a white point image
+      const webpData =
+        "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=";
+      // Retrieve the Image in Blob Format
+      const blob = await fetch(webpData).then(r => r.blob());
+      // If the createImageBitmap method succeeds, return true, otherwise false
+      await createImageBitmap(blob).then(
+        () => {
+          this.isSupportWebp = true;
+          console.log("true:", true);
+        },
+        () => {
+          this.isSupportWebp = false;
+          console.log("false:", false);
+        }
+      );
+      console.log("this.isSupportWebp:", this.isSupportWebp);
+    })();
+    console.log("install");
     Vue.prototype.isSupportWebp = this.isSupportWebp;
+
+    // (async function check_webp_feature() {
+    //   let lossy = "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA";
+    //   let result = false;
+    //   let img = new Image();
+    //   img.onload = function() {
+    //     result = img.width > 0 && img.height > 0;
+    //   };
+    //   img.onerror = function() {
+    //     result = false;
+    //   };
+    //   img.src = "data:image/webp;base64," + lossy;
+    //   return result;
+    // })();
+
+    // Vue.prototype.isSupportWebp = this.isSupportWebp;
     // 在PC 上测试jpg/png, 假装不支持webp
     // Vue.prototype.isSupportWebp = false;
 
