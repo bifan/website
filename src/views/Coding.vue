@@ -412,6 +412,46 @@
         >
       </v-card-actions>
     </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        :src="
+          require(isSupportWebp
+            ? '@/assets/img/coding-no-console.webp'
+            : '@/assets/img/coding-no-console.jpg')
+        "
+        alt="检测浏览器控制台是否打开"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>检测浏览器控制台是否打开</v-card-title>
+
+      <v-card-text>前端之间友好的交♂互🤭</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/综合应用/浏览器控制台/禁止用户打开控制台.html"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://www.notion.so/0fced3060152417ba85e85fd3a97cee7"
+          target="_blank"
+          >Notion 笔记</v-btn
+        >
+      </v-card-actions>
+    </v-card>
   </v-container>
 </template>
 
