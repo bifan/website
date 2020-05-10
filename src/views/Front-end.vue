@@ -157,6 +157,7 @@
 import Masonry from "masonry-layout";
 
 export default {
+  name: "Front-end",
   mounted() {
     new Masonry(".cards", {
       itemSelector: ".cards>div",

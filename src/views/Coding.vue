@@ -491,6 +491,7 @@
 import Masonry from "masonry-layout";
 
 export default {
+  name: "Coding",
   mounted() {
     new Masonry(".cards", {
       itemSelector: ".cards>div",
