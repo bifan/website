@@ -153,7 +153,21 @@ export default {
       mdiEmail,
       mdiAlphaBCircle,
       mdiSteam
+    },
+    previousScroll: {
+      x: null,
+      y: null
     }
-  })
+  }),
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      window.scrollTo(vm.previousScroll.x, vm.previousScroll.y);
+    });
+  },
+  beforeRouteLeave(to, from, next) {
+    this.previousScroll.x = window.scrollX;
+    this.previousScroll.y = window.scrollY;
+    next();
+  }
 };
 </script>

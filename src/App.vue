@@ -51,7 +51,10 @@
       </div>
     </v-app-bar>
     <v-content>
-      <router-view></router-view>
+      <keep-alive>
+        <router-view v-if="$route.meta.isNeedKeepAlive"></router-view>
+      </keep-alive>
+      <router-view v-if="!$route.meta.isNeedKeepAlive"></router-view>
       <!-- <transition> →  出现/消失 有个渐隐/渐显 动画 -->
       <!-- <keep-alive> → 缓存而不销毁(但是对于masonry-layout 不友好, 会触发masonry 重新计算元素) -->
       <!-- <transition>

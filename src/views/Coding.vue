@@ -492,11 +492,44 @@ import Masonry from "masonry-layout";
 
 export default {
   name: "Coding",
+  methods: {
+    doMasonryLayout() {
+      new Masonry(".cards", {
+        itemSelector: ".cards>div",
+        gutter: 10
+      });
+    }
+  },
   mounted() {
-    new Masonry(".cards", {
-      itemSelector: ".cards>div",
-      gutter: 10
+    this.doMasonryLayout();
+  },
+  // 计算Masonry 样式
+  // 恢复滚动位置
+  beforeRouteEnter(to, from, next) {
+    // 此时组件实例还没有产生
+    next(vm => {
+      // 组件实例产生后传入进来, 用vm 来代替this 操作当前组件
+      window.scrollTo(vm.previousScroll.x, vm.previousScroll.y);
     });
+  },
+
+  // 缓存滚动位置
+  data() {
+    return {
+      previousScroll: {
+        x: null,
+        y: null
+      }
+    };
+  },
+  activated() {
+    this.doMasonryLayout();
+  },
+  // 记录滚动位置
+  beforeRouteLeave(to, from, next) {
+    this.previousScroll.x = window.scrollX;
+    this.previousScroll.y = window.scrollY;
+    next();
   }
 };
 </script>

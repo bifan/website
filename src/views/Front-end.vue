@@ -158,11 +158,37 @@ import Masonry from "masonry-layout";
 
 export default {
   name: "Front-end",
+  methods: {
+    doMasonryLayout() {
+      new Masonry(".cards", {
+        itemSelector: ".cards>div",
+        gutter: 10
+      });
+    }
+  },
   mounted() {
-    new Masonry(".cards", {
-      itemSelector: ".cards>div",
-      gutter: 10
+    this.doMasonryLayout();
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      window.scrollTo(vm.previousScroll.x, vm.previousScroll.y);
     });
+  },
+  data() {
+    return {
+      previousScroll: {
+        x: null,
+        y: null
+      }
+    };
+  },
+  activated() {
+    this.doMasonryLayout();
+  },
+  beforeRouteLeave(to, from, next) {
+    this.previousScroll.x = window.scrollX;
+    this.previousScroll.y = window.scrollY;
+    next();
   }
 };
 </script>
