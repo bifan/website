@@ -484,6 +484,34 @@
         >
       </v-card-actions>
     </v-card>
+    <v-card width="350" outlined>
+      <v-img
+        height="200px"
+        src="@/assets/img/coding-rock-three.gif"
+        alt="CSS 动画"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+      <v-card-title>CSS Animation</v-card-title>
+
+      <v-card-text>三人组摇晃</v-card-text>
+      <v-card-actions class="cart-btns">
+        <v-btn
+          rel="noreferrer external noopener"
+          text
+          class="text-capitalize"
+          href="https://bifan.io/front-end-point/CSS/动画/demo-3d-1.html"
+          target="_blank"
+          >在线浏览</v-btn
+        >
+      </v-card-actions>
+    </v-card>
   </v-container>
 </template>
 
