@@ -9,6 +9,7 @@ vue add unit-jest
   添加unit-jest 会自动创建
     /tests/unit/example.spec.js
     jest.config.js
+
 vue add e2e-nightwatch
   e2e end to end 端到端测试, 模拟用户操作, 从页面到访问访问服务器到响应渲染完毕
   执行npm run test:e2e
@@ -17,3 +18,6 @@ vue add e2e-nightwatch
     自动关闭浏览器
     控制台打印测试结果
 */
+
+// Snapshot Tests, 快照测试, 保存上一次页面的内容, 与新的页面比较不同
+// 测试结果会展示不同的部分
