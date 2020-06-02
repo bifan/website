@@ -22,6 +22,7 @@ const routes = [
     meta: {
       isNeedKeepAlive: true
     },
+    // 使用import 异步加载, 触发Webpack 默认效果 → 单独打包动态加载的组件, 以做到单页面按需加载(路由懒加载)的效果
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Front-end.vue")
   },
@@ -32,6 +33,14 @@ const routes = [
       isNeedKeepAlive: true
     },
     component: () => import("@/views/Coding.vue")
+  },
+  {
+    path: "/d-masonry",
+    name: "D-Masonry-Component",
+    meta: {
+      isNeedKeepAlive: true
+    },
+    component: () => import("@/views/D-Masonry-Component.vue")
   }
 ];
 
