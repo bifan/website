@@ -524,7 +524,8 @@ export default {
     doMasonryLayout() {
       new Masonry(".cards", {
         itemSelector: ".cards>div",
-        gutter: 10
+        gutter: 10,
+        fitWidth: true
       });
     }
   },
