@@ -35,8 +35,56 @@ module.exports = {
       // swSrc is required in InjectManifest mode.
       swSrc: "dev/sw.js"
       // ...other Workbox options...
+      include: [/^.*shell\/.*$/],
+      exclude: [/^.*svg\/.*$/]
+    }/\.(js|css|png|jpg|gif)/
+  }*/,
+  pwa: {
+    workboxOptions: {
+      // include: ["favicon.ico"],
+      exclude: [/\.map$/, /manifest\.json$/]
+    },
+    iconPaths: {
+      favicon32: "favicons/favicon-32x32.png",
+      favicon16: "favicons/favicon-16x16.png",
+      appleTouchIcon: "favicons/apple-touch-icon.png",
+      maskIcon: "favicons/safari-pinned-tab.svg",
+      msTileImage: "favicons/mstile-150x150.png"
+    },
+    manifestOptions: {
+      // name: "website",
+      // short_name: "website",
+      // start_url: ".",
+      display: "standalone",
+      icons: [
+        {
+          src: "favicons/favicon-32x32.png",
+          sizes: "32x32",
+          type: "image/png"
+        },
+        {
+          src: "favicons/favicon-16x16.png",
+          sizes: "16x16",
+          type: "image/png"
+        },
+        {
+          src: "favicons/apple-touch-icon.png",
+          sizes: "180x180",
+          type: "image/png"
+        },
+        {
+          src: "favicons/safari-pinned-tab.svg",
+          sizes: "1143x1143",
+          type: "image/svg+xml"
+        },
+        {
+          src: "favicons/mstile-150x150.png",
+          sizes: "270x270",
+          type: "image/png"
+        }
+      ]
     }
-  }*/
+  }
 };
 
 // vue inspect --rule images, 在命令行打印出最终生效的webpack 配置中rule 数组中对images 配置的信息
