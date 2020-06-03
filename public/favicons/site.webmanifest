@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "website",
+  "short_name": "website",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "start_url": ".",
+  "start_url": "./",
   "display": "standalone"
 }
