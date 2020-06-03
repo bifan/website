@@ -3,10 +3,13 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
+
 // import WebP from "./plugins/webp";
 
 // CSS 预处理
 import "@/scss/index.scss";
+
+import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 

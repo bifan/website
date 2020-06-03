@@ -21,7 +21,22 @@ module.exports = {
       //   }
       // })
       .end();
-  }
+  } /*,
+  pwa: {
+    name: "My App",
+    themeColor: "#4DBA87",
+    msTileColor: "#000000",
+    appleMobileWebAppCapable: "yes",
+    appleMobileWebAppStatusBarStyle: "black",
+
+    // configure the workbox plugin
+    workboxPluginMode: "InjectManifest",
+    workboxOptions: {
+      // swSrc is required in InjectManifest mode.
+      swSrc: "dev/sw.js"
+      // ...other Workbox options...
+    }
+  }*/
 };
 
 // vue inspect --rule images, 在命令行打印出最终生效的webpack 配置中rule 数组中对images 配置的信息
