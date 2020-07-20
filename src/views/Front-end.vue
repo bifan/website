@@ -173,7 +173,8 @@ export default {
   },
   mounted() {
     this.doMasonryLayout();
-  },
+  }
+  /*
   beforeRouteEnter(to, from, next) {
     next(vm => {
       window.scrollTo(vm.previousScroll.x, vm.previousScroll.y);
@@ -188,12 +189,17 @@ export default {
     };
   },
   activated() {
-    this.doMasonryLayout();
+    window.innerWidth = window.innerWidth + 1;
+    console.log("activated");
+    this.$nextTick(function() {
+      this.doMasonryLayout();
+    });
   },
   beforeRouteLeave(to, from, next) {
     this.previousScroll.x = window.scrollX;
     this.previousScroll.y = window.scrollY;
     next();
   }
+  */
 };
 </script>

@@ -535,7 +535,8 @@ export default {
   },
   mounted() {
     this.doMasonryLayout();
-  },
+  }
+  /*
   // 计算Masonry 样式
   // 恢复滚动位置
   beforeRouteEnter(to, from, next) {
@@ -564,5 +565,6 @@ export default {
     this.previousScroll.y = window.scrollY;
     next();
   }
+  */
 };
 </script>
